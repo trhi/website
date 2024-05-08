@@ -1,0 +1,150 @@
+
+<!-- this is a comment -->
+<!-- a comment is a thing that the computer ignores -->
+<!-- a comment is a thing for humans to read -->
+<!-- a comment helps humans understand the code written for computers -->
+<!-- human, please read these comments -->
+
+<!-- all the stuff below, until title, is standard things you can pretty much just copy and paste -->
+<!-- without worrying too much about what it means-->
+
+<!DOCTYPE html> <!-- this tells the computer that the document type is html -->
+<!-- html is the language that web browsers speak -->
+<!-- web browsers (Chrome, Safari, Firefox) read html files (text) and make them into fabulous websites with images, videos, etc. -->
+<!-- our code says to the browser: "please interpret all of this stuff according to the html standards that we have agreed on globally" -->
+
+<html lang="en"> 
+    <!-- this "html tag": <html> tells the browser, the html code begins now -->
+    <!-- lang="en" tells screen readers that the text on this webpage is in English -->
+
+  <head> 
+    <!-- this is the website "header", which includes metadata about the website, such as: -->
+
+    <meta charset="UTF-8">
+    <!-- charset = "character set", this tells the browser to display all possible characters correctly on the page -->
+    <!-- if not determined, results in gibberish on screen, eg. "hääyö" becomes "hÃ⁠¤Ã⁠¤yÃ⁠¶" -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this tells the browser to adjust the content depending on the size of the "viewport" -->
+    <!-- the viewport is basically the user's screen -->
+    <!-- nowadays people will navigate websites on their phones or computers -->
+    <!-- so it's important to adjust the website content accordingly -->
+
+    <title>how to make a website</title>
+    <!-- now the fun begins! -->
+    <!-- whatever you write inside the title tag, ie. between <title></title> -->
+    <!-- will appeare on the tab in your browser!-->
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- here we link to a CSS "stylesheet", in which we can define fonts, colors, font size, etc. -->
+    <!-- we can also define these things on a need-by-need basis, "inline" in the html code -->
+    <!-- but sometimes, and often, it makes sense to define things for the whole website -->
+
+    <!-- I am going to write some CSS here for my document: -->	
+    <style>
+        body {background-color: lightyellow;}
+        p {font-size: 24px;}
+      </style>
+
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- here we define the "favicon", what a strange name -->
+    <!-- this is one of my favorite parts about making a website -->
+    <!-- you create a 32x32 PIXEL or 64x64 PIXEL image (VERY TINY) -->
+    <!-- and then this image is displayed as a tiny icon in the tab, next to the website title -->
+
+  </head>
+  <!-- this, backslash before the tag name </>, tells the browser: "end of all the metadata things I wanted to tell you" -->
+
+  <body>
+    <!-- here begins the BODY of a website, this is all the CONTENT, the STUFF of the website, the meat and bones. -->
+    <!-- in our case: images and text -->
+
+        <p>
+        <!-- this is a "p" tag, p is for "paragraph" -->
+        <!-- any text we write will be displayed on the website -->
+            This is a website about how to make a website.
+        </p>
+        <!-- must remember to close the p tag -->	
+
+        <p>please click option+command+I (mac) or F12 or Control+Shift+I (windows/linux) on chrome for developer tools so you can read the source code.</p>
+        
+        <hr>
+
+        <p>p, lower case, is for paragraph, the paragraph tag, a p. It is pronounced the same as pea 🫛.</p>
+
+        <hr>
+
+        <!-- now I will make small modifications to this "p"'s style: -->	
+        <p style="font-size: 50px;">This is how you increase the font size of a pea 🫛.</p>
+        <p style="color: seagreen;">This is how you add color to a pea 🫛.</p>
+        <p style="font-size:36px; color: deeppink;">This is how you increase the font size and the color of a pea 🫛.</p>
+        <p>This is how you <em>emphasize a pea</em> 🫛.</p>
+
+        <p>The more I repeat pea 🫛, the stranger it begins to sound 🔊.</p>
+
+        <hr>
+
+        <p>I will now add an <em>image</em>:</p>
+
+        <img style="width: 100%;" src="img/img1.jpg"></img>
+        <!-- src tells the browser where to find the image -->
+        <!-- img/ means that it is in the img folder -->
+        <!-- and img1.jpg is the name of the file -->	
+        <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
+        
+        <p>I will now indent the <em>image</em>:</p>
+        
+        <img style="width: 100%;" src="img/img1.jpg""></img>
+        <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
+
+        <p>I want the <em>image</em> to be bigger: 100% of the width of the screen.</p>
+        
+        <img style="width: 100%;" src="img/img1.jpg"></img>
+        <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
+
+        <p>I want the <em>image</em> to be small: 50% of the width of the screen.</p>
+        
+        <img style="width: 50%;" src="img/img1.jpg"></img>
+        <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
+
+        <hr>
+
+        <p>Now I am going to create a div - a content division element. I am going to make a div that has all my images.</p>
+        
+        <p>Now I am going to place the div so that it is perfectly centered on my page:</p>
+        <div style="margin:auto; width: 80%">
+          <img style="width:100%;" src="img/img1.jpg"></img>
+          <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
+        </div>
+
+        <hr>
+        <p>A list of websites written in simple html for you to explore. Copy and modify their source code:</p>
+        <!-- the "a" tag means "anchor" - confusing, right? In early days of html and the internet, it meant that the text inside
+        the tag was an anchor to another part of the html document, or to another page. 
+        
+        In the words of Tim Berners Lee, "inventor" of the internet:
+        "I used the term "anchor" for the the thing -- document or part of document -- a link starts or ends on" (post on 
+        X/Twitter on February 4th, 2020).
+
+        So I can write: Click <a>here</> to go to another site. If the user clicks on "here", it will take them to another site.
+
+        We tell the browser where to take the user by specifying the "href", the hypertext reference. This can be a website URL/address,
+        but it can also be other things, such as a link to another section of the same page we are already on.
+
+        I also specify: target="_blank;", this means that the link will open in a new browser tab.
+
+      -->
+
+
+      
+      <p>The first ever website <a style="font-size: 25px;" target="_blank" href="https://info.cern.ch/hypertext/WWW/TheProject.html">in the world.</a></p>
+      <p>(?) A very early artist portfolio template by <a style="font-size: 25px;" target="_blank" href="">Christine Lastname</a></p>
+      <p>The website of me, <a style="font-size: 25px;" target="_blank" href="https://terhimarttila.com/">Terhi Marttila.</a></p>
+      <p>The artist portfolio of <a style="font-size: 25px;" target="_blank" href="https://www.nenhures.net">Rafaela Nunes.</a></p>
+
+
+  </body>
+  <!-- again a backslash before the tag name, telling the browser that it's time to close the body, nothing more on this website -->
+
+  </html>
+<!-- and a last backslash, to tell the browser that the html file is now over and out -->
