@@ -35,18 +35,18 @@
     <!-- whatever you write inside the title tag, ie. between <title></title> -->
     <!-- will appeare on the tab in your browser!-->
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- here we link to a CSS "stylesheet", in which we can define fonts, colors, font size, etc. -->
     <!-- we can also define these things on a need-by-need basis, "inline" in the html code -->
     <!-- but sometimes, and often, it makes sense to define things for the whole website -->
 
     <!-- I am going to write some CSS here for my document: -->	
     <style>
-        body {background-color: lightyellow;}
+        body {background-color: rgb(255, 189, 241);}
         p {font-size: 24px;}
       </style>
 
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- here we define the "favicon", what a strange name -->
     <!-- this is one of my favorite parts about making a website -->
     <!-- you create a 32x32 PIXEL or 64x64 PIXEL image (VERY TINY) -->
@@ -90,16 +90,7 @@
         <!-- src tells the browser where to find the image -->
         <!-- img/ means that it is in the img folder -->
         <!-- and img1.jpg is the name of the file -->	
-        <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
-        
-        <p>I will now indent the <em>image</em>:</p>
-        
-        <img style="width: 100%;" src="img/img1.jpg""></img>
-        <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
-
-        <p>I want the <em>image</em> to be bigger: 100% of the width of the screen.</p>
-        
-        <img style="width: 100%;" src="img/img1.jpg"></img>
+        <!--make the image take up 100% of the width of the screen-->
         <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
 
         <p>I want the <em>image</em> to be small: 50% of the width of the screen.</p>
@@ -112,13 +103,20 @@
         <p>Now I am going to create a div - a content division element. I am going to make a div that has all my images.</p>
         
         <p>Now I am going to place the div so that it is perfectly centered on my page:</p>
-        <div style="margin:auto; width: 80%">
-          <img style="width:100%;" src="img/img1.jpg"></img>
+        <div style="width: 80%; margin:auto;"> <!-- width: take up 80% of the html document width 
+          margin: calculate the margin size accordingly, automatically -->
+          <img style="width:100%;" src="img/img1.jpg"></img> 
+          <!--and make the image width 100% of the width of the division element-->
+          <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>
+
+          <p>! This image works like <em>a link</em>, taking you to a webpage that tells all about the image:</p>  
+          <a target="_blank" href="work/img1.html"><img style="width:100%;" src="img/img1.jpg"></img></a>         
+          <!--and make the image width 100% of the width of the division element-->
           <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
         </div>
 
         <hr>
-        <p>A list of websites written in simple html for you to explore. Copy and modify their source code:</p>
+        <p>A list of websites written in html for you to explore. Copy and modify their source code:</p>
         <!-- the "a" tag means "anchor" - confusing, right? In early days of html and the internet, it meant that the text inside
         the tag was an anchor to another part of the html document, or to another page. 
         
@@ -137,10 +135,17 @@
 
 
       
-      <p>The first ever website <a style="font-size: 25px;" target="_blank" href="https://info.cern.ch/hypertext/WWW/TheProject.html">in the world.</a></p>
-      <p>(?) A very early artist portfolio template by <a style="font-size: 25px;" target="_blank" href="">Christine Lastname</a></p>
-      <p>The website of me, <a style="font-size: 25px;" target="_blank" href="https://terhimarttila.com/">Terhi Marttila.</a></p>
-      <p>The artist portfolio of <a style="font-size: 25px;" target="_blank" href="https://www.nenhures.net">Rafaela Nunes.</a></p>
+      <p style="font-size: 25px;">The <a target="_blank" href="https://info.cern.ch/hypertext/WWW/TheProject.html">first ever website</a> in the world.</p>
+      <p style="font-size: 25px;">(?) A very early artist portfolio template by <a target="_blank" href="">Christine Lastname</a></p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://terhimarttila.com/">Terhi Marttila</a>. Reads like a CV.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://www.nenhures.net">Rafaela Nunes</a>. Very elegant and beautiful.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://lizz.website/">Lizz Thabet</a>. Also very elegant and beautiful.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://nickm.com/">Nick Montfort</a>. Elegant and straight to the point.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://annaylin.com/100-days/">100 days of websites</a>. By Anna Y Lin.</p>
+
+      
+      
+      <p style="font-size: 25px;"><a target="_blank" href="https://thehtml.review/archive">A huge bunch of amazing websites by different artists</a>. Click on their name to access their website.</p> 
 
 
   </body>
